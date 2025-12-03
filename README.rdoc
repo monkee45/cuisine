@@ -1,0 +1,22 @@
+== README
+
+This application has been written on Windows 7.
+It is an example of how to use Authorization i.e. only users with a given role can access certain parts of the application.
+
+* Ruby version: 4.1
+
+* System dependencies: Windows 7
+
+* Configuration: Rails 4.1.8
+
+* Database creation: SQLite3
+
+* Database initialization: contains a seeds.rb file to seed the database
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

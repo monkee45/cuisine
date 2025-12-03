@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyNewRails</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+ 
+  </head>
+  <body>
+
+  <div class="header">
+    <div class="container">
+
+      <div class="nav">
+        <% if current_user %>
+          <ul>
+            <li><%= current_user.email %></li>
+            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          </ul>
+        <% else %>
+          <ul>
+            <li><%= link_to "Log in", login_path %></a></li>
+            <li><%= link_to "Sign up", signup_path %></a></li>
+          </ul>
+        <% end %>
+      </div>
+
+      <div class="logo">
+      </div>
+
+    </div>
+  </div>
+  <%= yield %>
+
+  </body>
+</html>
